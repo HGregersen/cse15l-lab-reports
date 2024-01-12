@@ -8,7 +8,7 @@ _No Arguments_
 * I ran the command in both /home/lecture1 and /home/lecture1/messages directories.
 * With both directories, when you run cd with no argument, you're returned to the /home directory (you stay in the /home directory if you're already there). 
 * The output is not an error.
-<br>
+<br/>
 _Directory As Argument_
 * ![Image](cdDArg1.png)
 * ![Image](cdDArg2.png)
@@ -62,6 +62,6 @@ _File As Argument_
 * I ran the commands in the /home directory.
 * I concatenated the README and Hello.java files in the /home/lecture1 directory and it returned the text contents of the files.
 * There were no errors.
-***
+___
 ##Notes
 * If you try to access a file/directory with the incorrect path for the directory you're in, i.e. ls messages while in /home instead of /home/lecture1, or there's a misspelling, you will get an error saying there's no such file/directory.
