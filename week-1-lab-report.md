@@ -28,7 +28,7 @@ __ls__
 <br>
 _No Arguments_
 * ![Image](lsNoArg1.png)
-* ![Image](lsNoArg2.png)
+* ![Image](lsNoArg.png)
 * I ran the commands in the /home and /home/lecture1 directories.
 * With both directories, without an argument, ls lists the files and directories in the respective current working directories.
 * The output is not an error.
