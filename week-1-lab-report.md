@@ -1,6 +1,5 @@
 # Week 1 Lab Report
 ## cd
-<br>
 _No Arguments_
 * ![Image](cdNoArg1.png)
 * ![Image](cdNoArg2.png)
@@ -21,10 +20,9 @@ _File As Argument_
 * ![Image](cdFArg1.png)
 * I ran the command in the /home directory.
 * While I tried to change to the /home/lecture1/messages/en-us.txt file, since it isn't a directory it gave me an error and I was unable to do so.
-<br><br>
+<br>
 
 ## ls
-<br>
 _No Arguments_
 * ![Image](lsNoArg1.png)
 * ![Image](lsNoArg.png)
@@ -45,10 +43,9 @@ _File As Argument_
 * I ran the commands in the /home and /home/lecture1/messages directories.
 * With both directories, it just returned the path that I inputted for the files (/lecture1/messages/en-us.txt and en-us.txt).
 * There were no errors.
-<br><br>
+<br>
 
 ## cat
-<br>
 _No Arguments_
 * ![Image](catNoArg.png)
 * I ran the commands in the /home and /home/lecture1 directories.
@@ -67,6 +64,7 @@ _File As Argument_
 * I ran the commands in the /home directory.
 * I concatenated the README and Hello.java files in the /home/lecture1 directory and it returned the text contents of the files.
 * There were no errors.
----
+	---
+
 ## Notes
 * If you try to access a file/directory with the incorrect path for the directory you're in, i.e. ls messages while in /home instead of /home/lecture1, or there's a misspelling, you will get an error saying there's no such file/directory.
