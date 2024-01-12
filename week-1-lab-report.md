@@ -1,6 +1,5 @@
 # Week 1 Lab Report
-## Commands
-__cd__
+##cd
 <br>
 _No Arguments_
 * ![Image](cdNoArg1.png)
@@ -24,7 +23,7 @@ _File As Argument_
 * While I tried to change to the /home/lecture1/messages/en-us.txt file, since it isn't a directory it gave me an error and I was unable to do so.
 <br><br>
 
-__ls__
+##ls
 <br>
 _No Arguments_
 * ![Image](lsNoArg1.png)
@@ -48,7 +47,7 @@ _File As Argument_
 * There were no errors.
 <br><br>
 
-__cat__
+##cat
 <br>
 _No Arguments_
 * ![Image](catNoArg.png)
