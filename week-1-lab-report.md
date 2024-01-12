@@ -65,7 +65,7 @@ _File As Argument_
 * I concatenated the README and Hello.java files in the /home/lecture1 directory and it returned the text contents of the files.
 * There were no errors.
 
----
+***
 
 ## Notes
 * If you try to access a file/directory with the incorrect path for the directory you're in, i.e. ls messages while in /home instead of /home/lecture1, or there's a misspelling, you will get an error saying there's no such file/directory.
