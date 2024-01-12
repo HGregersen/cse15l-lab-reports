@@ -20,6 +20,7 @@ _File As Argument_
 * ![Image](cdFArg1.png)
 * I ran the command in the /home directory.
 * While I tried to change to the /home/lecture1/messages/en-us.txt file, since it isn't a directory it gave me an error and I was unable to do so.
+* The output is not an error.
 <br>
 
 ## ls
@@ -32,25 +33,25 @@ _No Arguments_
 <br>
 
 _Directory As Argument_
-* ![Image](lsDArg1.png)
-* I ran the commands in the /home directory.
-* For both arguments, I tried to list what's in the /home/lecture1/messages directory, but since I was in the /home directory, I couldn't get to it without adding that it was in the /home/lecture1 directory (first argument).
-* The second argument gave me an error saying that there's no such file/directory since /messages is not a directory in /home, but a directory in /home/lecture1.
+* ![Image](lsDArg.png)
+* I ran the command in the /home directory.
+* I listed what's in the /home/lecture1/messages directory, Hello.class, Hello.java, the messages folder/directory, and README.
+* The output is not an error.
 <br>
 
 _File As Argument_
 * ![Image](lsFArg1.png)
 * I ran the commands in the /home and /home/lecture1/messages directories.
-* With both directories, it just returned the path that I inputted for the files (/lecture1/messages/en-us.txt and en-us.txt).
-* There were no errors.
+* With both directories, it just returned the path that I inputted for the file (/lecture1/messages/en-us.txt and en-us.txt).
+* The output is not an error.
 <br>
 
 ## cat
 _No Arguments_
 * ![Image](catNoArg.png)
 * I ran the commands in the /home and /home/lecture1 directories.
-* With both directories, it just returns nothing, but you can get out of it with Ctrl+C.
-* It did not return an error.
+* In both directories, it just returns nothing, but you can get out of it with Ctrl + C.
+* The output is not an error.
 <br>
 
 _Directory As Argument_
@@ -63,7 +64,7 @@ _File As Argument_
 * ![Image](catFArg.png)
 * I ran the commands in the /home directory.
 * I concatenated the README and Hello.java files in the /home/lecture1 directory and it returned the text contents of the files.
-* There were no errors.
+* The output is not an error.
 
 ***
 
