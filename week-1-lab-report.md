@@ -10,17 +10,16 @@ _No Arguments_
 
 _Directory As Argument_
 * ![Image](cdDArg1.png)
-* ![Image](cdDArg2.png)
 * I ran the commands in the /home directory.
-* For both arguments, I tried to change to the /home/lecture1/messages directory, but since I was in the /home directory, I couldn't get to it without adding that it was in the /home/lecture1 directory (first argument).
-* The second argument gave me an error saying that there's no such file/directory since /messages is not a directory in /home, but a directory in /home/lecture1.
+* I tried to change to the /home/lecture1/messages directory and was able to successfully do so (as see with pwd or the prefix).
+* The output is not an error.
 <br>
 
 _File As Argument_
 * ![Image](cdFArg1.png)
 * I ran the command in the /home directory.
 * While I tried to change to the /home/lecture1/messages/en-us.txt file, since it isn't a directory it gave me an error and I was unable to do so.
-* The output is not an error.
+* The output is an error since you can't change to a non-directory with cd.
 <br>
 
 ## ls
@@ -48,9 +47,9 @@ _File As Argument_
 
 ## cat
 _No Arguments_
-* ![Image](catNoArg.png)
+* ![Image](catNoArg1.png)
 * I ran the commands in the /home and /home/lecture1 directories.
-* In both directories, it just returns nothing, but you can get out of it with Ctrl + C.
+* In both directories, it just returns whatever you type into the terminal, but you can get out of it with Ctrl + C or Ctrl + D (recommended).
 * The output is not an error.
 <br>
 
