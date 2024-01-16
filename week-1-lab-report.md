@@ -49,7 +49,7 @@ __File As Argument__
 __No Arguments__
 * ![Image](catNoArg1.png)
 * I ran the commands in the `/home` and `/home/lecture1` directories.
-* In both directories, it just returns whatever you type into the terminal, but you can get out of it with Ctrl + C or Ctrl + D (recommended).
+* In both directories, it just returns whatever you type into the terminal, but you can get out of it with `Ctrl + C` or `Ctrl + D` (recommended).
 * The output is not an error.
 <br>
 
