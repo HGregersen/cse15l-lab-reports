@@ -1,5 +1,5 @@
 # Week 1 Lab Report
-## cd
+## `cd`
 __No Arguments__
 * ![Image](cdNoArg1.png)
 * ![Image](cdNoArg2.png)
