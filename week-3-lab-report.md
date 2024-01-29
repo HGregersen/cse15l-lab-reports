@@ -19,7 +19,7 @@
 Private Key<br>
 ![Image](private.png)
 <br>Public Key<br>
-![Image](public.png
+![Image](public.png)
 <br>Logging Without Password<br>
 ![Image](NoPass.png)
 <br>
