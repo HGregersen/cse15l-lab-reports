@@ -18,6 +18,7 @@
 **SSH Keys**<br>
 Private Key<br>
 ![Image](private.png)
+Should be in `id_rsa.pub`
 <br>Public Key<br>
 ![Image](public.png)
 <br>Logging Without Password<br>
