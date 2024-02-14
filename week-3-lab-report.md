@@ -18,7 +18,7 @@
 **SSH Keys**<br>
 Private Key - /c/Users/hikar/id_rsa<br>
 ![Image](private.png)
-<br>Public Key - /c/Users/hikar/id_rsa.pub<br>
+<br>Public Key - saved into /home/linux/ieng6/oce/5b/hgregersen/.ssh/authorized_keys<br>
 ![Image](public.png)
 <br>Logging Without Password<br>
 ![Image](NoPass.png)
