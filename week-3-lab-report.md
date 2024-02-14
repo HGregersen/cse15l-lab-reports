@@ -16,10 +16,9 @@
 <br>
 ## Part 2
 **SSH Keys**<br>
-Private Key<br>
+Private Key - /c/Users/hikar/id_rsa<br>
 ![Image](private.png)
-Should be in `id_rsa.pub`
-<br>Public Key<br>
+<br>Public Key - /c/Users/hikar/id_rsa.pub<br>
 ![Image](public.png)
 <br>Logging Without Password<br>
 ![Image](NoPass.png)
