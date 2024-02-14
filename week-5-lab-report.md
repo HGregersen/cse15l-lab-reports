@@ -20,10 +20,10 @@ public void testReverseInPlace() {
 }
 ```
 **Output**<br>
-*Success*
-![Successful Run](success.png)
-*Failure*
-![Failed Run](failure.png)
+*Success*<br>
+![Successful Run](success.png)<br>
+*Failure*<br>
+![Failed Run](failure.png)<br>
 **Code**<br>
 *Before*
 ```
@@ -44,7 +44,52 @@ static void reverseInPlace(int[] arr) {
 }
 ```
 **Description:** This fixes the issue since originally the code would just iterate through the provided array arr and basically put the last element at each index (so the array test I provided would give {3, 3} 
-instead of {3, 2}). So instead I made it so that it saved the element before changing it and only ran for half of the original time (i < arr.length / 2) so that it would switch the first and last elements for each
+instead of {3, 2}). So, instead, I made it so that it saved the element before changing it and only ran for half of the original time (i < arr.length / 2) so that it would switch the first and last elements for each
 iteration.<br><br>
-## Part 2 - Researching Commands (find)
-**
+## Part 2 - Researching Commands (`grep [options] [pattern] [files]`)
+**`-c`**<br>
+* ```
+  $ grep -c "RNA" biomed/1471-2105-3-2.txt
+  384
+  ```
+  * The command finds the number of lines in the specified file that matches the provided string ("RNA", 384).
+* ```
+  $ $ grep -c "table" biomed/1471-2105-3-2.txt
+  34
+  ```
+  * The command finds the number of lines in the specified file that matches the provided string ("table", 34).
+<br>
+**`-l`**<br>
+* ```
+  $ grep -l "table" *
+  grep: 911report: Is a directory
+  grep: biomed: Is a directory
+  grep: government: Is a directory
+  grep: plos: Is a directory
+  ```
+  * The command finds and lists the files/directories that contain the provided string ("table") in the specified files (* (all)).
+* ```
+  $ grep -l "toes" *
+  grep: 911report: Is a directory
+  grep: biomed: Is a directory
+  grep: government: Is a directory
+  grep: plos: Is a directory
+  ```
+  * The command finds and lists the files/directories that contain the provided string ("toes") in the specified files (* (all)).
+<br>
+**`-H`**<br>
+* ```
+  $ find -H table biomed/1471-2105-3-2.txt
+  biomed/1471-2105-3-2.txt:            Nucleotide Frequency Tabular Display tables (see
+  biomed/1471-2105-3-2.txt:            Base-Pair" tables that are discussed in the next
+  ... note 31 lines omitted ...
+  biomed/1471-2105-3-2.txt:        generate more frequency tables for more phylogenetic groups
+  ```
+  * The command makes sure that the file name is listed even when searching in only one file (`biomed/1471-2105-3-2.txt`).
+* ```
+  $ grep -H pizza 911report/chapter-7.txt
+  911report/chapter-7.txt:                pursuing ordinary activities: making ATM withdrawals, eating pizza, and shopping at
+  ```
+  * The command makes sure the file name is listed when searching for a specific string ("pizza") in only one file (`911report/chapter-7.txt`)
+<br>
+**Source:[https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
