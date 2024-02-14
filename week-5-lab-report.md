@@ -59,7 +59,7 @@ iteration.<br><br>
   ```
   * The command finds the number of lines in the specified file that matches the provided string ("table", 34).
 <br>
-<br>**`-l`**<br>
+<br><br>**`-l`**<br>
 * ```
   $ grep -l "table" *
   grep: 911report: Is a directory
@@ -77,7 +77,7 @@ iteration.<br><br>
   ```
   * The command finds and lists the files/directories that contain the provided string ("toes") in the specified files (* (all)).
 <br>
-<br>**`-H`**<br>
+<br><br>**`-H`**<br>
 * ```
   $ find -H table biomed/1471-2105-3-2.txt
   biomed/1471-2105-3-2.txt:            Nucleotide Frequency Tabular Display tables (see
@@ -92,4 +92,4 @@ iteration.<br><br>
   ```
   * The command makes sure the file name is listed when searching for a specific string ("pizza") in only one file (`911report/chapter-7.txt`)
 <br>
-<br>**Source:[https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
+<br><br><br>**Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
