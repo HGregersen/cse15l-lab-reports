@@ -59,7 +59,7 @@ iteration.<br><br>
   ```
   * The command finds the number of lines in the specified file that matches the provided string ("table", 34).
 <br>
-**`-l`**<br>
+<br>**`-l`**<br>
 * ```
   $ grep -l "table" *
   grep: 911report: Is a directory
@@ -77,7 +77,7 @@ iteration.<br><br>
   ```
   * The command finds and lists the files/directories that contain the provided string ("toes") in the specified files (* (all)).
 <br>
-**`-H`**<br>
+<br>**`-H`**<br>
 * ```
   $ find -H table biomed/1471-2105-3-2.txt
   biomed/1471-2105-3-2.txt:            Nucleotide Frequency Tabular Display tables (see
