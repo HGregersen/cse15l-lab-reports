@@ -79,7 +79,7 @@ iteration.<br><br>
 <br>
 <br><br>**`-H`**<br>
 * ```
-  $ find -H table biomed/1471-2105-3-2.txt
+  $ grep -H table biomed/1471-2105-3-2.txt
   biomed/1471-2105-3-2.txt:            Nucleotide Frequency Tabular Display tables (see
   biomed/1471-2105-3-2.txt:            Base-Pair" tables that are discussed in the next
   ... note 31 lines omitted ...
@@ -91,5 +91,45 @@ iteration.<br><br>
   911report/chapter-7.txt:                pursuing ordinary activities: making ATM withdrawals, eating pizza, and shopping at
   ```
   * The command makes sure the file name is listed when searching for a specific string ("pizza") in only one file (`911report/chapter-7.txt`)
+<br>
+<br><br>**`-v`**<br>
+* ```
+  $ grep -v "the" biomed/1468-6708-3-1.txt
+  
+    
+      
+        Introduction
+        Older adults are frequently counseled to lose weight,
+        associated with increased mortality in those over age 65.
+        Six large controlled population-based studies of
+  ... note 277 lines omitted ...
+          YOL Years of life
+      
+    
+  
+
+  ```
+  * The command finds every line that doesn't contain `the` (case-sensitive) in the specified file (`biomed/1468-6708-3-1.txt`).
+* ```
+  $ grep -v "and" biomed/1468-6708-3-1.txt
+
+  
+    
+      
+        Introduction
+        Older adults are frequently counseled to lose weight,
+        even though there is little evidence that overweight is
+        associated with increased mortality in those over age 65.
+        Six large controlled population-based studies of
+    ... note 325 lines omitted ...
+        QALY Quality-adjusted life years
+        YHL Years of healthy life
+        YOL Years of life
+      
+    
+  
+
+  ```
+  * The command finds every lines that doesn't contain `and` (case-sensitive) in the specified file (`biomed/1468-6708-3-1.txt`).
 <br>
 <br><br><br>**Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)**
