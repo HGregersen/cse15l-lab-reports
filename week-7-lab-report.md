@@ -28,5 +28,5 @@
 ![Committing and Pushing](commit_push.png)
 ![Committing and Pushing Proof](commit_push_effects.png)
 * Key Presses: `git <space> add <space> -A <enter> git <space> commit <space> -m <space> "ListExamples.java" <enter> git <space> push <space> origin <space> main <enter>`
-* Summary: I used `git commit -A` to stage all changes made and then used `git commit -m "Fixing ListExamples.java"` (messed up the file name in the commit message) to save the changes to the local repository. I then used `git push origin main` to push the changes to the actual GitHub account.
+* Summary: I used `git add -A` to stage all changes made and then used `git commit -m "Fixing ListExamples.java"` (messed up the file name in the commit message) to save the changes to the local repository with a specific message. I then used `git push origin main` to push the changes to the actual GitHub repository.
 * Note: The second image is to show that the GitHub repository was in fact changed recently.
