@@ -2,19 +2,87 @@
 ## Part 1 - Debugging Scenario
 **Student Post**<br>
 ![bug output](bug_OP.png)<br>
-  Hi! I wanted to know if I could get any help with my code. I assume it's my conditional in my `grade.sh` bash script that decides how much credit the student gets and whetehr or not they passed. It claims that the corrected `ListExamples` method repository didn't pass but doesn't correctly report the number of tests run and doesn't show what .
+  Hi! I wanted to know if I could get any help with my code. I assume it is not my conditional in my `/c/Users/hikar/Documents/GitHub/list-examples-grader/grade.sh` `bash` script since it (based on the output) correctly returns that the tests failed and gave its respective output. Since it claims that the tests failed, I assume that it's something to do with my code in `/c/Users/hikar/Documents/GitHub/list-examples-grader/TestListExamples.java`.<br>
 **TA Response**<br>
-  Can you make sure that you are using the correct assert methods for your tester methods and that you are comparing the correct expected and actual outputs?
+  Can you make sure that you are using the correct assert methods for your tester methods and that you are comparing the correct expected and actual outputs? You should also maybe add a line in your `bash` script to check if the output returns that it actually fails or if it is running the conditional incorrectly.<br>
+**Student Response**<br>
+  Before:
+  ```
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.util.Arrays;
+  import java.util.List;
+  
+  class IsMoon implements StringChecker {
+    public boolean checkString(String s) {
+      return s.equalsIgnoreCase("moon");
+    }
+  }
+  
+  public class TestListExamples {
+    @Test(timeout = 500)
+    public void testMergeRightEnd() {
+      List<String> left = Arrays.asList("a", "b", "c");
+      List<String> right = Arrays.asList("a", "d");
+      List<String> merged = ListExamples.merge(left, right);
+      List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
+      assertSame(expected, merged);
+    }
+  
+    @Test
+    public void testFilter() {
+      List<String> tester = Arrays.asList("moon", "stars", "moon");
+      List<String> expected = Arrays.asList("moon", "moon");
+      IsMoon sc = new IsMoon();
+      List<String> actual = ListExamples.filter(tester, sc);
+      assertSame(expected, actual);
+    }
+  }
+  ```
+  After:
+  ```
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.util.Arrays;
+  import java.util.List;
+  
+  class IsMoon implements StringChecker {
+    public boolean checkString(String s) {
+      return s.equalsIgnoreCase("moon");
+    }
+  }
+  
+  public class TestListExamples {
+    @Test(timeout = 500)
+    public void testMergeRightEnd() {
+      List<String> left = Arrays.asList("a", "b", "c");
+      List<String> right = Arrays.asList("a", "d");
+      List<String> merged = ListExamples.merge(left, right);
+      List<String> expected = Arrays.asList("a", "a", "b", "c", "d");
+      assertEquals(expected, merged);
+    }
+  
+    @Test
+    public void testFilter() {
+      List<String> tester = Arrays.asList("moon", "stars", "moon");
+      List<String> expected = Arrays.asList("moon", "moon");
+      IsMoon sc = new IsMoon();
+      List<String> actual = ListExamples.filter(tester, sc);
+      assertEquals(expected, actual);
+    }
+  }
+  ```
+![fixed output](fixed_OP.png)<br>
+  I realized that I was using the wrong assert methods as `assertSame` checks the `Object` references instead of the actual content, and since two different `ArrayLists` were being created and compared, they had two different references, making the statement return false for both tests. So, I changed it from `assertSame` to `assertEquals` so that the actual content was compared and the `grade.sh` ran correctly (picture above).<br>
+![bug output2](bug_OP2.png)<br>
+Lines 37-40 of `/c/Users/hikar/Documents/GitHub/list-examples-grader/grade.sh`
+  ```
+  java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt
+  
+  lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
+  echo $lastline
+  ```
+  I also added code to my `bash` script to show the output of compiling and running the testers and it revealed that the tests were failing (picture above).
 
-
-
-
-The original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is. (Don't actually make the post! Just write the content that would go in such a post)
-A response from a TA asking a leading question or suggesting a command to try (To be clear, you are mimicking a TA here.)
-Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is.
-At the end, all the information needed about the setup including:
-The file & directory structure needed
-The contents of each file before fixing the bug
-The full command line (or lines) you ran to trigger the bug
-A description of what to edit to fix the bug
-You should actually set up and run the scenario from your screenshots. It should involve at least a Java file and a bash script. Describing the bug should involve reading some output at the terminal resulting from running one or more commands. Design an error that produces more interesting output than a single message about a syntax or unbound identifier error – showcase some interesting wrong behavior! Feel free to set this up by cloning and breaking some existing code like the grading script or code from class, or by designing something of your own from scratch, etc.
+## Part 2 - Reflection
+  I found the conditionals you could implement in `bash` scripts to be pretty interesting as their formatting is different than the conditionals I've used and implemented before. Additionally, I thought the fact that you can use the output of what you ran as a variable or input for a new function/variable with `bash` and just have premade commands for the terminal was pretty cool. Lastly, I thought that the ability to use `vim` to read and edit your code from the terminal was fascinating since I didn't know it was possible and it could make editing code while `ssh`ing easier.
