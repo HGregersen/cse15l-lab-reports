@@ -2,9 +2,9 @@
 ## Part 1 - Debugging Scenario
 **Student Post**<br>
 ![bug output](bug_OP.png)<br>
-  Hi! I wanted to know if I could get any help with my code. I assume it is not my conditional in my `/c/Users/hikar/Documents/GitHub/list-examples-grader/grade.sh` `bash` script since it (based on the output) correctly returns that the tests failed and gave its respective output. Since it claims that the tests failed, I assume that it's something to do with my code in `/c/Users/hikar/Documents/GitHub/list-examples-grader/TestListExamples.java`.<br>
+  Hi! I wanted to know if I could get any help with my code. I assume it is not my conditional in my `/c/Users/hikar/Documents/GitHub/list-examples-grader/grade.sh` `bash` script since it (based on the output) correctly returns that the tests failed and gave its respective output. Since it claims that the tests failed, I assume that it's something to do with my code in `/c/Users/hikar/Documents/GitHub/list-examples-grader/TestListExamples.java`.<br><br>
 **TA Response**<br>
-  Can you make sure that you are using the correct assert methods for your tester methods and that you are comparing the correct expected and actual outputs? You should also maybe add a line in your `bash` script to check if the output returns that it actually fails or if it is running the conditional incorrectly.<br>
+  Can you make sure that you are using the correct assert methods for your tester methods and that you are comparing the correct expected and actual outputs? You should also maybe add a line in your `bash` script to check if the output returns that it actually fails or if it is running the conditional incorrectly.<br><br>
 **Student Response**<br>
   Before:
   ```
